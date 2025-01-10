@@ -1,0 +1,34 @@
+mkdir interview-bot
+cd interview-bot
+npm init -y 
+npx create-react-app frontend
+cd frontend
+npm install @tailwindcss/forms axios 
+cd ..
+
+# 初始化 git 仓库
+git init
+
+# 创建 .gitignore 文件
+echo "node_modules/" > .gitignore
+echo "build/" >> .gitignore
+echo ".env" >> .gitignore
+
+# 创建并编辑 README.md
+touch README.md
+echo '# Interview Bot\n\n一个基于 React 和 Node.js 的面试问题自动回复机器人。' > README.md
+
+# 添加所有文件到暂存区
+git add README.md
+git add .gitignore
+git add frontend/
+git add package.json
+
+# 创建第一次提交
+git commit -m "Initial commit: Interview bot project setup"
+
+# 添加远程仓库 (将 YOUR_USERNAME 替换为你的 GitHub 用户名)
+git remote add origin https://github.com/YOUR_USERNAME/interview-bot.git
+
+# 推送到 GitHub
+git push -u origin main 
